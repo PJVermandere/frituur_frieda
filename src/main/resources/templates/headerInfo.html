@@ -1,0 +1,10 @@
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments::header(title='RequestheaderInfo' )"></head>
+<body>
+<nav th:replace="fragments::navBar"></nav>
+    <ol >
+        <th:block th:each="head: ${rHeader}"><li  style="font-weight: bold" th:text="${head.key}"></li><span th:text="${head.value}"></span></th:block>
+    </ol>
+</body>
+</html>

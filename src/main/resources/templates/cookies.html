@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments::header(title = 'Cookies')"></head>
+<body>
+    <nav th:replace="fragments::navBar"></nav>
+    <th:block th:text="|Totaal aantal bezoeken: ${bezocht} |"></th:block>
+</body>
+</html>

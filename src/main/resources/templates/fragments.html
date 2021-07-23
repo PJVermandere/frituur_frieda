@@ -1,0 +1,17 @@
+<!--HEADER-->
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="header(title)">
+        <title th:text="'Frituur frieda | ' + ${title}"></title>
+        <link rel="icon" href="images/frida.ico" type="image/x-icon">
+        <link rel="stylesheet" th:href="@{/styles/index.css}">
+    </head>
+<!--NAVBAR-->
+    <nav th:fragment="navBar">
+        <ul>
+            <li><a th:href="@{/}">home</a></li>
+            <li><a th:href="@{/sauzen}">sauzen</a></li>
+            <li><a th:href="@{/headerInfo}">@Requestheader</a></li>
+            <li><a th:href="@{/cookies}">@CookieValues</a></li>
+        </ul>
+    </nav>
+</html>

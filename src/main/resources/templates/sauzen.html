@@ -1,0 +1,10 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments::header(title='Sauzen')"></head>
+
+<body>
+    <nav th:replace="fragments::navBar"></nav>
+    <ul th:each="saus: ${sauzen}" th:object="${saus}">
+        <li><a th:text="*{naam}" th:href="@{/sauzen/{id}(id=*{nummer})}"></a></li>
+    </ul>
+</body>
+</html>

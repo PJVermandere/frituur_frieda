@@ -1,0 +1,13 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments::header(title= ${saus}? ${saus.naam}+' saus': 'Saus niet gevonden')"></head>
+
+<body>
+    <nav th:replace="fragments::navBar"></nav>
+    <th:block th:object="${saus}">
+    <span th:each="item: *{ingredienten}" th:text="${item}" style="display: block"></span>
+    <span th:text="*{prijs}+€"></span>
+    </th:block>
+    <div th:text="|${dollar}$|"></div>
+
+</body>
+</html>
