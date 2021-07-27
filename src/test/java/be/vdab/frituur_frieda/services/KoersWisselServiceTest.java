@@ -21,7 +21,7 @@ class KoersWisselServiceTest {
 
     @BeforeEach
     void setUp() {
-        service = new DefaultKoersWisselService(client);
+        service = new DefaultKoersWisselService(new KoersClient[] {client});
     }
 
     @Test
