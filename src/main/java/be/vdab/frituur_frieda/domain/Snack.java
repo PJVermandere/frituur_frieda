@@ -8,19 +8,25 @@ public class Snack {
     private final String name;
     private final BigDecimal price;
 
-    Snack(long id, String name, BigDecimal price){
+    public Snack(String name, BigDecimal price){
+        id = 0L;
+        this.name = name;
+        this.price = price;
+    }
+
+    public Snack(long id, String name, BigDecimal price){
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    long getId(){
+    public long getId(){
         return id;
     }
-    String getName(){
+    public String getName(){
         return name;
     }
-    BigDecimal getPrice(){ return price; }
+    public BigDecimal getPrice(){ return price; }
 
     @Override
     public String toString(){

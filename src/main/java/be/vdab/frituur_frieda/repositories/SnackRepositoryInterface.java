@@ -15,6 +15,6 @@ public interface SnackRepositoryInterface {
     Optional<Snack> getOneSnack(long id);
     long getSnackCount();
     List<BigDecimal> getUniquePrices();
-    List<Snack> getSnackWithPrice(BigDecimal price);
-    List<Snack> getSnacksWithId(Set<Long> ids);
+    List<Snack> getSnacksWithPrice(BigDecimal price);
+    List<Snack> getSnacksById(Set<Long> ids);
 }
